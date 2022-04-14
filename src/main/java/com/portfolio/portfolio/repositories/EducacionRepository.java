@@ -1,13 +1,11 @@
 package com.portfolio.portfolio.repositories;
-import com.portfolio.portfolio.models.PersonaModel;
+import com.portfolio.portfolio.models.EducacionModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 
-
-public interface PersonaRepository extends CrudRepository<PersonaModel, Integer> {
-
+public interface EducacionRepository extends CrudRepository<EducacionModel, Integer> {
 
 }
     
