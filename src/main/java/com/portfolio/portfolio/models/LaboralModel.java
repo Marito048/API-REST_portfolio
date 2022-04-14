@@ -16,9 +16,8 @@ public class LaboralModel {
     public String ingreso_laboral;
     public String egreso_laboral;
     public String descripcion_laboral;
-    @ManyToOne
-    public int persona_id_persona;
-
+    
+    
     public int getId_laboral() {
         return this.id_laboral;
     }
