@@ -13,11 +13,11 @@ public class LaboralService {
     @Autowired
     LaboralRepository laboralRepository;
 
-    public ArrayList<LaboralModel> obtenerLaboral(){
+    public ArrayList<LaboralModel> obtenerLaburo(){
         return (ArrayList<LaboralModel>)laboralRepository.findAll();
         
     }
-    public LaboralModel guardarLaboral(LaboralModel laboral){
+    public LaboralModel guardarLaburo(LaboralModel laboral){
         return laboralRepository.save(laboral);
     }
     

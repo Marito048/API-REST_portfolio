@@ -6,26 +6,27 @@ import com.portfolio.portfolio.models.LaboralModel;
 import com.portfolio.portfolio.services.LaboralService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/laboral")
 public class LaboralController {
     @Autowired
     LaboralService laboralService;
 
     @GetMapping()
-    public ArrayList<LaboralModel> obtenerLaboral(){
-        return laboralService.obtenerLaboral();
+    public ArrayList<LaboralModel> obtenerLaburo(){
+        return laboralService.obtenerLaburo();
         
     
     }
     @PostMapping()
-    public LaboralModel guardarLaboral(LaboralModel laboral){
-        return laboralService.guardarLaboral(laboral);
+    public LaboralModel guardarLaburo(LaboralModel laboral){
+        return laboralService.guardarLaburo(laboral);
     }    
     
 }
