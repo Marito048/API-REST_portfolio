@@ -1,4 +1,6 @@
 package com.portfolio.portfolio.models;
+import java.sql.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,11 +15,10 @@ public class LaboralModel {
     public String empresa_laboral;
     public String logo_laboral;
     public String puesto_laboral;
-    public String ingreso_laboral;
-    public String egreso_laboral;
+    public Date ingreso_laboral;
+    public Date egreso_laboral;
     public String descripcion_laboral;
-    
-    
+
     public int getId_laboral() {
         return this.id_laboral;
     }
@@ -50,19 +51,19 @@ public class LaboralModel {
         this.puesto_laboral = puesto_laboral;
     }
 
-    public String getIngreso_laboral() {
+    public Date getIngreso_laboral() {
         return this.ingreso_laboral;
     }
 
-    public void setIngreso_laboral(String ingreso_laboral) {
+    public void setIngreso_laboral(Date ingreso_laboral) {
         this.ingreso_laboral = ingreso_laboral;
     }
 
-    public String getEgreso_laboral() {
+    public Date getEgreso_laboral() {
         return this.egreso_laboral;
     }
 
-    public void setEgreso_laboral(String egreso_laboral) {
+    public void setEgreso_laboral(Date egreso_laboral) {
         this.egreso_laboral = egreso_laboral;
     }
 
@@ -73,8 +74,9 @@ public class LaboralModel {
     public void setDescripcion_laboral(String descripcion_laboral) {
         this.descripcion_laboral = descripcion_laboral;
     }
-
-  
+    
+    
+    
 
     
 
