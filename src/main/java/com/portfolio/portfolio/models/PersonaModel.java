@@ -1,30 +1,33 @@
 package com.portfolio.portfolio.models;
 import javax.persistence.*;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 @Entity 
 @Table(name = "persona")
 public class PersonaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    
-    private int id_persona;
-    private String nombre_persona;
-    private String apellido_persona;
-    private String ubicacion_persona;
-    private String telefono_persona;
-    private String email_persona;
-    private String titulo_persona;
-    private String foto_persona;
-    private String banner_persona;
-    private String acercade_persona;
+        Long id_persona;
+    @Basic
+    String nombre_persona;
+    String apellido_persona;
+    String ubicacion_persona;
+    String telefono_persona;
+    String email_persona;
+    String titulo_persona;
+    String foto_persona;
+    String banner_persona;
+    String acercade_persona;
 
-    public int getId_persona() {
+    public Long getId_persona() {
         return this.id_persona;
     }
 
-    public void setId_persona(int id_persona) {
+    public void setId_persona(Long id_persona) {
         this.id_persona = id_persona;
     }
 
@@ -44,12 +47,12 @@ public class PersonaModel {
         this.apellido_persona = apellido_persona;
     }
 
-    public String getUbucacion_persona() {
+    public String getUbicacion_persona() {
         return this.ubicacion_persona;
     }
 
-    public void setUbucacion_persona(String ubucacion_persona) {
-        this.ubicacion_persona = ubucacion_persona;
+    public void setUbicacion_persona(String ubicacion_persona) {
+        this.ubicacion_persona = ubicacion_persona;
     }
 
     public String getTelefono_persona() {
@@ -100,4 +103,6 @@ public class PersonaModel {
         this.acercade_persona = acercade_persona;
     }
 
+    
+    
 }

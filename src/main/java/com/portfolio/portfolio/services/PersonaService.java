@@ -19,8 +19,14 @@ public class PersonaService {
         return (ArrayList<PersonaModel>)usuarioRepository.findAll();
         
     }
-    public PersonaModel guardarUsuario(PersonaModel usuario){
-        return usuarioRepository.save(usuario);
+    public void crearUsuario(PersonaModel persona){
+        usuarioRepository.save(persona);
+    }
+    public void  guardarUsuario(PersonaModel persona){
+        usuarioRepository.save(persona);
+    }
+    public void  eliminarUsuario(Long id_persona){
+         usuarioRepository.deleteById(id_persona);
     }
 
 }
