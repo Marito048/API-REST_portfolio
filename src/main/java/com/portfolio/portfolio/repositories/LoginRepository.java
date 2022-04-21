@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 
-public interface LoginRepository extends CrudRepository <LoginModel, Integer > {
+public interface LoginRepository extends CrudRepository <LoginModel, Long > {
 
 }
     

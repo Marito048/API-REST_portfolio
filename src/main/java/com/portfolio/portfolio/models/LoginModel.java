@@ -15,8 +15,8 @@ public class LoginModel {
 
     @Basic
         String usuario_login;
-    String clave_login;
-    String rol_login;
+        String clave_login;
+        String rol_login;
 
     public Long getId_login() {
         return this.id_login;

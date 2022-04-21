@@ -18,7 +18,13 @@ public class LoginService {
     public LoginModel guardarLogin(LoginModel login){
         return loginRepository.save(login);
     }
+    public void crearLogin(LoginModel login){
+        loginRepository.save(login);
+    }
     
+    public void  eliminarLogin(Long id_login){
+         loginRepository.deleteById(id_login);
+    }
 
     
 
