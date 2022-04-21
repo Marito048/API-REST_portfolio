@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     @Autowired
     LoginService loginService;
-    @GetMapping()
+    @GetMapping("/obtener")
     public ArrayList<LoginModel> obtenerLogin(){
         return loginService.obtenerLogin();
     }
-    @PostMapping()
+    @PostMapping("/crear")
     public LoginModel guardarLogin(LoginModel login){
         return loginService.guardarLogin(login);
     }
