@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -20,17 +21,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     @Autowired
     LoginService loginService;
+    
     @GetMapping("/obtener")
+    @ResponseBody
     public ArrayList<LoginModel> obtenerLogin(){
         return loginService.obtenerLogin();
     }
     @PostMapping("/crear")
-    public LoginModel guardarLogin(LoginModel login){
-        return loginService.guardarLogin(login);
+    public void crearLogin(@RequestBody LoginModel login){
+         loginService.crearLogin(login);
     }
     @PutMapping("/modificar")
     public void modificarLogin(@RequestBody LoginModel login){
-        loginService.guardarLogin(login);
+        loginService.crearLogin(login);
             
     }    
     @DeleteMapping("/borrar/{id_login}")

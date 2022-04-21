@@ -15,11 +15,12 @@ public class LoginService {
     public ArrayList<LoginModel> obtenerLogin(){
         return (ArrayList<LoginModel>)loginRepository.findAll();
     }
-    public LoginModel guardarLogin(LoginModel login){
-        return loginRepository.save(login);
-    }
+    
     public void crearLogin(LoginModel login){
         loginRepository.save(login);
+    }
+    public void guardarLogin(LoginModel login){
+         loginRepository.save(login);
     }
     
     public void  eliminarLogin(Long id_login){
