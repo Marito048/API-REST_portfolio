@@ -22,21 +22,21 @@ public class LoginController {
     @Autowired
     LoginService loginService;
     
-    @GetMapping("/obtener")
+    @GetMapping("/get")
     @ResponseBody
     public ArrayList<LoginModel> obtenerLogin(){
         return loginService.obtenerLogin();
     }
-    @PostMapping("/crear")
+    @PostMapping("/form")
     public void crearLogin(@RequestBody LoginModel login){
          loginService.crearLogin(login);
     }
-    @PutMapping("/modificar")
+    @PutMapping("/update")
     public void modificarLogin(@RequestBody LoginModel login){
         loginService.crearLogin(login);
             
     }    
-    @DeleteMapping("/borrar/{id_login}")
+    @DeleteMapping("/delete/{id_login}")
     public void borrarLogin(@PathVariable Long id_login){
         loginService.eliminarLogin(id_login);
             
