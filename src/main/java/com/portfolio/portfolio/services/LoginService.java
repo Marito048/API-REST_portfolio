@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class LoginService {
     @Autowired
     LoginRepository loginRepository;
+    
     public ArrayList<LoginModel> obtenerLogin(){
         return (ArrayList<LoginModel>)loginRepository.findAll();
     }
