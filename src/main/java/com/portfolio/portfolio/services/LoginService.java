@@ -13,18 +13,18 @@ public class LoginService {
     @Autowired
     LoginRepository loginRepository;
     
-    public ArrayList<LoginModel> obtenerLogin(){
+    public ArrayList<LoginModel> obtenerUsuario(){
         return (ArrayList<LoginModel>)loginRepository.findAll();
     }
     
-    public void crearLogin(LoginModel login){
+    public void crearUsuario(LoginModel login){
         loginRepository.save(login);
     }
-    public void guardarLogin(LoginModel login){
+    public void guardarUsuario(LoginModel login){
          loginRepository.save(login);
     }
     
-    public void  eliminarLogin(Long id_login){
+    public void  eliminarUsuario(Long id_login){
          loginRepository.deleteById(id_login);
     }
 

@@ -25,20 +25,20 @@ public class LoginController {
     @GetMapping("/get")
     @ResponseBody
     public ArrayList<LoginModel> obtenerLogin(){
-        return loginService.obtenerLogin();
+        return loginService.obtenerUsuario();
     }
     @PostMapping("/form")
     public void crearLogin(@RequestBody LoginModel login){
-         loginService.crearLogin(login);
+         loginService.crearUsuario(login);
     }
     @PutMapping("/update")
-    public void modificarLogin(@RequestBody LoginModel login){
-        loginService.guardarLogin(login);
+    public void modificarUsuario(@RequestBody LoginModel login){
+        loginService.guardarUsuario(login);
             
     }    
     @DeleteMapping("/delete/{id_login}")
-    public void borrarLogin(@PathVariable Long id_login){
-        loginService.eliminarLogin(id_login);
+    public void borrarUsuario(@PathVariable Long id_login){
+        loginService.eliminarUsuario(id_login);
             
     } 
     
