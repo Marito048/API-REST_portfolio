@@ -27,7 +27,7 @@ public class LoginController {
     public ArrayList<LoginModel> obtenerLogin(){
         return loginService.obtenerUsuario();
     }
-    @PostMapping("/form")
+    @PostMapping("/new")
     public void crearLogin(@RequestBody LoginModel login){
          loginService.crearUsuario(login);
     }
