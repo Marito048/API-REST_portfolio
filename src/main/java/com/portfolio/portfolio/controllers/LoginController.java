@@ -33,7 +33,7 @@ public class LoginController {
     }
     @PutMapping("/update")
     public void modificarUsuario(@RequestBody LoginModel login){
-        loginService.guardarUsuario(login);
+        loginService.crearUsuario(login);
             
     }    
     @DeleteMapping("/delete/{id_login}")
