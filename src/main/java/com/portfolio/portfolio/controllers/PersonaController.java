@@ -21,25 +21,24 @@ public class PersonaController {
 
     @GetMapping("/obtener")
     @ResponseBody
-    public ArrayList<PersonaModel> obtenerUsuarios(){
-        return personaService.obtenerUsuarios();
-        
-    
+    public ArrayList<PersonaModel> obtenerPersona(){
+        return personaService.obtenerPersona();
+       
     }
    
     @PostMapping("/crear")
-    public void crearUsuario(@RequestBody PersonaModel persona){
-        personaService.crearUsuario(persona);
+    public void crearPersona(@RequestBody PersonaModel persona){
+        personaService.crearPersona(persona);
             
     }    
     @PutMapping("/modificar")
-    public void modificarUsuario(@RequestBody PersonaModel persona){
-        personaService.crearUsuario(persona);
+    public void modificarPersona(@RequestBody PersonaModel persona){
+        personaService.crearPersona(persona);
             
     }    
     @DeleteMapping("/borrar/{id_persona}")
-    public void borrarUsuario(@PathVariable Long id_persona){
-        personaService.eliminarUsuario(id_persona);
+    public void borrarPersona(@PathVariable Long id_persona){
+        personaService.eliminarPersona(id_persona);
             
     } 
      

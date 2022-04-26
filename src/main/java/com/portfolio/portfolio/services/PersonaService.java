@@ -15,17 +15,18 @@ public class PersonaService {
     @Autowired
     PersonaRepository usuarioRepository;
 
-    public ArrayList<PersonaModel> obtenerUsuarios(){
+    
+    public ArrayList<PersonaModel> obtenerPersona(){
         return (ArrayList<PersonaModel>)usuarioRepository.findAll();
         
     }
-    public void crearUsuario(PersonaModel persona){
+    public void crearPersona(PersonaModel persona){
         usuarioRepository.save(persona);
     }
-    public void  guardarUsuario(PersonaModel persona){
+    public void  guardarPersona(PersonaModel persona){
         usuarioRepository.save(persona);
     }
-    public void  eliminarUsuario(Long id_persona){
+    public void  eliminarPersona(Long id_persona){
          usuarioRepository.deleteById(id_persona);
     }
 
