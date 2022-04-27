@@ -1,7 +1,5 @@
 package com.portfolio.portfolio.services;
-
 import java.util.ArrayList;
-
 import com.portfolio.portfolio.models.PersonaModel;
 import com.portfolio.portfolio.repositories.PersonaRepository;
 
@@ -13,21 +11,21 @@ import org.springframework.stereotype.Service;
 
 public class PersonaService {
     @Autowired
-    PersonaRepository usuarioRepository;
+    PersonaRepository personaRepository;
 
     
     public ArrayList<PersonaModel> obtenerPersona(){
-        return (ArrayList<PersonaModel>)usuarioRepository.findAll();
+        return (ArrayList<PersonaModel>)personaRepository.findAll();
         
     }
     public void crearPersona(PersonaModel persona){
-        usuarioRepository.save(persona);
+        personaRepository.save(persona);
     }
     public void  guardarPersona(PersonaModel persona){
-        usuarioRepository.save(persona);
+        personaRepository.save(persona);
     }
     public void  eliminarPersona(Long id_persona){
-         usuarioRepository.deleteById(id_persona);
+         personaRepository.deleteById(id_persona);
     }
 
 }
