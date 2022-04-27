@@ -28,6 +28,7 @@ public class LoginController {
         return loginService.obtenerUsuario();
     }
     @PostMapping("/new")
+    
     public void crearUsuario(@RequestBody LoginModel login){
          loginService.crearUsuario(login);
     }
