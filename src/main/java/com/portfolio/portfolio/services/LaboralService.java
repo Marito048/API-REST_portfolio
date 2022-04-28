@@ -17,8 +17,17 @@ public class LaboralService {
         return (ArrayList<LaboralModel>)laboralRepository.findAll();
         
     }
-    public LaboralModel guardarLaburo(LaboralModel laboral){
-        return laboralRepository.save(laboral);
-    }
+    public void crearLaburo(LaboralModel laboral){
+        laboralRepository.save(laboral);
+    } 
+    public void guardarLaburo(LaboralModel laboral){
+        laboralRepository.save(laboral);
+    } 
+
     
+    public void  eliminarLaburo (Long id_laboral){
+         laboralRepository.deleteById(id_laboral);
+    }
 }
+    
+

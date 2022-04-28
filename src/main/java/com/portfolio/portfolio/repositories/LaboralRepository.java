@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LaboralRepository extends CrudRepository<LaboralModel, Integer> {
+public interface LaboralRepository extends CrudRepository<LaboralModel, Long> {
 
 }
 

@@ -11,19 +11,21 @@ public class LaboralModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     
-    public int id_laboral;
-    public String empresa_laboral;
-    public String logo_laboral;
-    public String puesto_laboral;
-    public Date ingreso_laboral;
-    public Date egreso_laboral;
-    public String descripcion_laboral;
+    public Long id_laboral;
 
-    public int getId_laboral() {
+    @Basic
+    String empresa_laboral;
+    String logo_laboral;
+    String puesto_laboral;
+    Date ingreso_laboral;
+    Date egreso_laboral;
+    String descripcion_laboral;
+
+    public Long getId_laboral() {
         return this.id_laboral;
     }
 
-    public void setId_laboral(int id_laboral) {
+    public void setId_laboral(Long id_laboral) {
         this.id_laboral = id_laboral;
     }
 
