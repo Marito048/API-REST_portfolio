@@ -13,6 +13,7 @@ public class LaboralController {
     LaboralService laboralService;
 
     @GetMapping("/get")
+    @ResponseBody
     public ArrayList<LaboralModel> obtenerLaburo(){
         return laboralService.obtenerLaburo();
         

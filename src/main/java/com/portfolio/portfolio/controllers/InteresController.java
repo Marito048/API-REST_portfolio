@@ -13,6 +13,7 @@ public class InteresController {
     InteresService interesService;
     
     @GetMapping("/get")
+    @ResponseBody
     public ArrayList<InteresModel> obtenerInteres(){
         return interesService.obtenerInteres();
     }
