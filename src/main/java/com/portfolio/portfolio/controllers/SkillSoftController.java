@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/hard")
+@RequestMapping("/soft")
 public class SkillSoftController {
     @Autowired
     SkillSoftService skillSoftService;
