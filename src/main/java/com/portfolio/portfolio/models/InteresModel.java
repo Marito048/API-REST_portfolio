@@ -16,16 +16,16 @@ public class InteresModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-     int id_interes;
+     Long id_interes;
     
     @Basic
     String descripcion_interes;
 
-    public int getId_interes() {
+    public Long getId_interes() {
         return this.id_interes;
     }
 
-    public void setId_interes(int id_interes) {
+    public void setId_interes(Long id_interes) {
         this.id_interes = id_interes;
     }
 
@@ -33,8 +33,8 @@ public class InteresModel {
         return this.descripcion_interes;
     }
 
-    public void setTipo_interes(String tipo_interes) {
-        this.descripcion_interes = tipo_interes;
+    public void setTipo_interes(String descripcion_interes) {
+        this.descripcion_interes = descripcion_interes;
     }
 
         
