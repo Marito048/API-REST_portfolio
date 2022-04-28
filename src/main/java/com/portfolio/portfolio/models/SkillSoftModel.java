@@ -23,7 +23,7 @@ public class SkillSoftModel {
      Long id_blandas;
     
     @Basic
-    String porcentajes_blandas;
+    String porcentaje_blandas;
     String titulo_blandas;
     String descripcion_blandas;
 

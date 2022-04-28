@@ -23,7 +23,7 @@ public class SkillHardModel {
      Long id_duras;
     
     @Basic
-    String porcentajes_duras;
+    String porcentaje_duras;
     String titulo_duras;
     String descripcion_duras;
 
