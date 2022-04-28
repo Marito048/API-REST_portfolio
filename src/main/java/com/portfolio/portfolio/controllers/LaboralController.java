@@ -24,7 +24,7 @@ public class LaboralController {
     }
 
     @PutMapping("/update")
-    public void  modificarLaburo(LaboralModel laboral){
+    public void  modificarLaburo(@RequestBody LaboralModel laboral){
          laboralService.crearLaburo(laboral);
 
     }    

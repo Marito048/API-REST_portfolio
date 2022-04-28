@@ -1,5 +1,6 @@
 package com.portfolio.portfolio.models;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,8 +16,10 @@ public class InteresModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    private int id_interes;
-    private String tipo_interes;
+     int id_interes;
+    
+    @Basic
+    String descripcion_interes;
 
     public int getId_interes() {
         return this.id_interes;
@@ -27,11 +30,11 @@ public class InteresModel {
     }
 
     public String getTipo_interes() {
-        return this.tipo_interes;
+        return this.descripcion_interes;
     }
 
     public void setTipo_interes(String tipo_interes) {
-        this.tipo_interes = tipo_interes;
+        this.descripcion_interes = tipo_interes;
     }
 
         

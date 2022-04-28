@@ -9,11 +9,21 @@ import org.springframework.stereotype.Service;
 public class InteresService {
     @Autowired
     InteresRepository interesRepository;
+    
     public ArrayList<InteresModel> obtenerInteres(){
         return (ArrayList<InteresModel>)interesRepository.findAll();
+        
     }
-    public InteresModel guardarInteres(InteresModel interes){
-        return interesRepository.save(interes);
+    public void crearInteres(InteresModel interes){
+        interesRepository.save(interes);
+    } 
+    public void guardarInteres(InteresModel interes){
+        interesRepository.save(interes);
+    } 
+
+    
+    public void  eliminarInteres (Long id_interes){
+         interesRepository.deleteById(id_interes);
     }
     
 }
