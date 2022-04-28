@@ -2,10 +2,12 @@ package com.portfolio.portfolio.models;
 import javax.persistence.*;
 import javax.persistence.GenerationType;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 @Entity
 @Table(name="interes")
-
 
 public class InteresModel {
     @Id
@@ -16,27 +18,5 @@ public class InteresModel {
     @Basic
     String descripcion_interes;
 
-    public Long getId_interes() {
-        return this.id_interes;
-    }
-
-    public void setId_interes(Long id_interes) {
-        this.id_interes = id_interes;
-    }
-
-    public String getTipo_interes() {
-        return this.descripcion_interes;
-    }
-
-    public void setTipo_interes(String descripcion_interes) {
-        this.descripcion_interes = descripcion_interes;
-    }
-
         
-
-
-   
-    
-
-    
 }
