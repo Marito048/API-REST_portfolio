@@ -1,4 +1,9 @@
 package com.portfolio.portfolio.controllers;
+import java.util.ArrayList;
+
+import com.portfolio.portfolio.models.SkillSoftModel;
+import com.portfolio.portfolio.services.SkillSoftService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,9 +31,9 @@ public class SkillSoftController {
         skillSoftService.crearSkill(skill);
             
     }    
-    @DeleteMapping("/delete/{id_duras}")
-    public void borrarSkill(@PathVariable Long id_skill){
-        skillSoftService.eliminarSkill(id_skill);
+    @DeleteMapping("/delete/{id_blandas}")
+    public void borrarSkill(@PathVariable Long id_blandas){
+        skillSoftService.borrarSkill(id_blandas);
             
     } 
      
