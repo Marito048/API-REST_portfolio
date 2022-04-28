@@ -1,13 +1,8 @@
 package com.portfolio.portfolio.models;
-
 import java.sql.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 
 @Entity
@@ -19,18 +14,19 @@ public class EducacionModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     
-    private int id_educacion;
-    private String institucion_educacion;
-    private Date ingreso_educacion;
-    private Date egreso_educacion;
-    private String titulo_educacion;
-    private String detalles_educacion;
+     Long id_educacion;
+    @Basic  
+     String institucion_educacion;
+     Date ingreso_educacion;
+     Date egreso_educacion;
+     String titulo_educacion;
+     String detalles_educacion;
 
-    public int getId_educacion() {
+    public Long getId_educacion() {
         return this.id_educacion;
     }
 
-    public void setId_educacion(int id_educacion) {
+    public void setId_educacion(Long id_educacion) {
         this.id_educacion = id_educacion;
     }
 

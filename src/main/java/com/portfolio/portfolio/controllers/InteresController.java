@@ -29,7 +29,7 @@ public class InteresController {
     }    
     
     @DeleteMapping("/delete/{id_interes}")
-    public void  borrrarLaburo (@PathVariable Long id_interes){
+    public void  borrrarInteres (@PathVariable Long id_interes){
         interesService.eliminarInteres(id_interes);
 
     }

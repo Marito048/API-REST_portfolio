@@ -11,12 +11,20 @@ public class EducacionService {
     @Autowired
     EducacionRepository educacionRepository;
     
-    public ArrayList<EducacionModel> obtenerEstudios(){
+    public ArrayList<EducacionModel> obtenerInteres(){
         return (ArrayList<EducacionModel>)educacionRepository.findAll();
         
     }
-    public EducacionModel guardarEstudios(EducacionModel educacion){
-        return educacionRepository.save(educacion);
+    public void crearInteres(EducacionModel educacion){
+        educacionRepository.save(educacion);
+    } 
+    public void guardarInteres(EducacionModel educacion){
+        educacionRepository.save(educacion);
+    } 
+
+    
+    public void  eliminarInteres (Long id_educacion){
+         educacionRepository.deleteById(id_educacion);
     }
 
     

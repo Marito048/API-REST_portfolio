@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface EducacionRepository extends JpaRepository<EducacionModel, Integer> {
+public interface EducacionRepository extends JpaRepository<EducacionModel, Long> {
 
 }
     
