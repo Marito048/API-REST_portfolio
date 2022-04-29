@@ -15,7 +15,7 @@ public class EducacionController {
     @Autowired
     EducacionService educacionService;
 
-    @GetMapping("/get")
+    @GetMapping("/traer")
     public ArrayList<EducacionModel> obtenerEducacion(){
         return educacionService.obtenerEducacion();
     }
