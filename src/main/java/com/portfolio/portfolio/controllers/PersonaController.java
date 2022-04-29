@@ -1,11 +1,9 @@
 package com.portfolio.portfolio.controllers;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import com.portfolio.portfolio.models.PersonaModel;
 import com.portfolio.portfolio.services.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/persona")

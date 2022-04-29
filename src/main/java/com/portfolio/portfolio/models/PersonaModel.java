@@ -1,13 +1,11 @@
 package com.portfolio.portfolio.models;
 import javax.persistence.*;
-
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
 @Entity 
 @Table(name = "persona")
-
 public class PersonaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +20,5 @@ public class PersonaModel {
         String titulo_persona;
         String foto_persona;
         String banner_persona;
-        String acercade_persona;
-           
-    
-    
+        String acercade_persona;    
 }
