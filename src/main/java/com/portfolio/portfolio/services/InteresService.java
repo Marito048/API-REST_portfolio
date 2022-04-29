@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+
 public class InteresService {
     @Autowired
     InteresRepository interesRepository;
@@ -20,10 +21,11 @@ public class InteresService {
     public void guardarInteres(InteresModel interes){
         interesRepository.save(interes);
     } 
+
     
-    public void  borrarInteres (Long id_interes){
+    public void  eliminarInteres (Long id_interes){
          interesRepository.deleteById(id_interes);
     }
+
     
 }
-
