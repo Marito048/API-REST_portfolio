@@ -19,7 +19,7 @@ public class ProyectosController {
     }
     @PostMapping("/new")
     public void crearProyectos(@RequestBody ProyectosModel proyectos){
-         proyectosService.guardarProyectos(proyectos);
+         proyectosService.crearProyectos(proyectos);
           
     }
     @PutMapping("/update")
