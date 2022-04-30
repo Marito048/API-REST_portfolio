@@ -13,12 +13,13 @@ public class ProyectosService {
     public ArrayList<ProyectosModel> obtenerProyectos(){
         return (ArrayList<ProyectosModel>)proyectosRepository.findAll();
     }
-    public void  guardarProyectos(ProyectosModel proyectos){
-         proyectosRepository.save(proyectos);
-    }
     public void crearProyectos(ProyectosModel proyectos){
         proyectosRepository.save(proyectos);
     }
+    public void  guardarProyectos(ProyectosModel proyectos){
+         proyectosRepository.save(proyectos);
+    }
+   
     public void eliminarProyectos(Long id_Proyectos){
         proyectosRepository.deleteById(id_Proyectos);
     }

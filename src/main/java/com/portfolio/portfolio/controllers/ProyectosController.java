@@ -24,7 +24,7 @@ public class ProyectosController {
     }
     @PutMapping("/update")
     public void modificarProyectos(@RequestBody ProyectosModel proyectos){
-         proyectosService.guardarProyectos(proyectos);
+         proyectosService.crearProyectos(proyectos);
         
     }
     @DeleteMapping("/delete/{id_Proyectos}")

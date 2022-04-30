@@ -12,7 +12,6 @@ public class PersonaService {
     
     public ArrayList<PersonaModel> obtenerPersona(){
         return (ArrayList<PersonaModel>)personaRepository.findAll();
-        
     }
     public void crearPersona(PersonaModel persona){
         personaRepository.save(persona);
