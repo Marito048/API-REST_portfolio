@@ -17,5 +17,23 @@ public class ProyectosController {
         return proyectosService.obtenerProyectos();
 
     }
+    @PostMapping("/post")
+    
+    public void guardarProyecto(@RequestBody ProyectosModel proyectosModel){
+         proyectosService.guardarProyectos(proyectosModel);
+          
+    }
+    @PutMapping("/put/{id_Proyectos}")
+    
+    public void actualizarProyectos(@PathVariable Long id_Proyectos, @RequestBody ProyectosModel proyectosModel){
+        proyectosService.guardarProyectos(proyectosModel);
+    }
+    @DeleteMapping("/delete/{id_Proyectos}")
+    
+    public void eliminarProyectos(@PathVariable Long id_Proyectos){
+        proyectosService.eliminarProyectos(id_Proyectos);
+    }
+
     
 }
+
