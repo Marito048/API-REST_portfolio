@@ -18,18 +18,16 @@ public class ProyectosController {
 
     }
     @PostMapping("/new")
-    
-    public void crearProyectos(@RequestBody ProyectosModel proyectosModel){
-         proyectosService.guardarProyectos(proyectosModel);
+    public void crearProyectos(@RequestBody ProyectosModel proyectos){
+         proyectosService.guardarProyectos(proyectos);
           
     }
     @PutMapping("/update")
-    
-    public void modificarProyectos(@PathVariable Long id_Proyectos, @RequestBody ProyectosModel proyectosModel){
-        proyectosService.guardarProyectos(proyectosModel);
+    public void modificarProyectos(@RequestBody ProyectosModel proyectos){
+         proyectosService.guardarProyectos(proyectos);
+        
     }
     @DeleteMapping("/delete/{id_Proyectos}")
-    
     public void borrarProyectos(@PathVariable Long id_Proyectos){
         proyectosService.eliminarProyectos(id_Proyectos);
     }
