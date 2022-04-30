@@ -19,15 +19,16 @@ public class SkillHardModel {
      Long id_duras;
      
     
-     Long porcentaje_duras;
+     @Basic
+     String porcentaje_duras;
      String titulo_duras;
      String descripcion_duras;
 
-     public Long getPorcentaje_duras() {
+     public String getPorcentaje_duras() {
          return this.porcentaje_duras;
      }
 
-     public void setPorcentaje_duras(Long porcentaje_duras) {
+     public void setPorcentaje_duras(String porcentaje_duras) {
          this.porcentaje_duras = porcentaje_duras;
      }
 

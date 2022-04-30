@@ -16,15 +16,16 @@ public class SkillSoftModel {
     @Column(unique = true, nullable = false)
      Long id_blandas;
     
-     Long porcentaje_blandas;
+     @Basic
+     String porcentaje_blandas;
      String titulo_blandas;
      String descripcion_blandas;
 
-     public Long getPorcentaje_blandas() {
+     public String getPorcentaje_blandas() {
          return this.porcentaje_blandas;
      }
 
-     public void setPorcentaje_blandas(Long porcentaje_blandas) {
+     public void setPorcentaje_blandas(String porcentaje_blandas) {
          this.porcentaje_blandas = porcentaje_blandas;
      }
 
