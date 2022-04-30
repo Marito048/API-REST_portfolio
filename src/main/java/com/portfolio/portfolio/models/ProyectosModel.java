@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity 
-@Table(name = "proyecto")
+@Table(name = "proyectos")
 public class ProyectosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

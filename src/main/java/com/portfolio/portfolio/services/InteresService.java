@@ -12,20 +12,18 @@ public class InteresService {
     InteresRepository interesRepository;
     
     public ArrayList<InteresModel> obtenerInteres(){
-        return (ArrayList<InteresModel>)interesRepository.findAll();
-        
+        return (ArrayList<InteresModel>) interesRepository.findAll();
+    }
+    public void guardarInteres(InteresModel interes){
+        interesRepository.save(interes);
     }
     public void crearInteres(InteresModel interes){
         interesRepository.save(interes);
-    } 
-    public void guardarInteres(InteresModel interes){
-        interesRepository.save(interes);
-    } 
-
-    
-    public void  eliminarInteres (Long id_interes){
-         interesRepository.deleteById(id_interes);
     }
+    public void eliminarInteres(Long id_Interes){
+        interesRepository.deleteById(id_Interes);
+    }
+    
 
     
 }

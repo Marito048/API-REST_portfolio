@@ -1,10 +1,7 @@
 package com.portfolio.portfolio.services;
-
 import java.util.ArrayList;
-
 import com.portfolio.portfolio.models.SkillHardModel;
 import com.portfolio.portfolio.repositories.SkillHardRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

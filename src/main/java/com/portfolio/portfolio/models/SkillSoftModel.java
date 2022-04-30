@@ -1,19 +1,13 @@
 package com.portfolio.portfolio.models;
-
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter 
 @Entity
-@Table(name="softSkill")
+@Table(name="habilidadesBlandas")
 
 
 public class SkillSoftModel {
@@ -23,7 +17,7 @@ public class SkillSoftModel {
      Long id_blandas;
     
     @Basic
-    String porcentaje_blandas;
+    Long porcentaje_blandas;
     String titulo_blandas;
     String descripcion_blandas;
 

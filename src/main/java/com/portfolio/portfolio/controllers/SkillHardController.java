@@ -18,23 +18,19 @@ public class SkillHardController {
     @ResponseBody
     public ArrayList<SkillHardModel> obtenerSkill(){
         return skillHardService.obtenerSkill();
-       
     }
-   
     @PostMapping("/new")
-    public void crearSkill(@RequestBody SkillHardModel skill){
+    public void crearSkill (SkillHardModel skill){
         skillHardService.crearSkill(skill);
-            
-    }    
+    }
     @PutMapping("/update")
-    public void modificarSkill(@RequestBody SkillHardModel skill){
-        skillHardService.crearSkill(skill);
-            
-    }    
+    public void modificarSkill (SkillHardModel skill){
+        skillHardService.guardarSkill(skill);
+    }
     @DeleteMapping("/delete/{id_duras}")
-    public void borrarSkill(@PathVariable Long id_skill){
-        skillHardService.borrarSkill(id_skill);
-            
-    } 
+    public void borrrarSkill (@PathVariable Long id_duras){
+        skillHardService.borrarSkill(id_duras);
+    }
+    
      
 }

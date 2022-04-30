@@ -22,7 +22,7 @@ public class InteresModel {
     Long id_interes;
 
     @Basic
-    String descripcion_interes;
+    String tipo_interes;
  
 
 

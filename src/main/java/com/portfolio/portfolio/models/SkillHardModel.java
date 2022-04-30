@@ -1,19 +1,15 @@
 package com.portfolio.portfolio.models;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter 
 @Entity
-@Table(name="hardSkill")
+@Table(name="habilidadesDuras")
 
 
 public class SkillHardModel {
@@ -21,9 +17,9 @@ public class SkillHardModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
      Long id_duras;
-    
+     
     @Basic
-    String porcentaje_duras;
+    Long porcentaje_duras;
     String titulo_duras;
     String descripcion_duras;
 
