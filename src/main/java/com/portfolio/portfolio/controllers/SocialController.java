@@ -1,7 +1,6 @@
 package com.portfolio.portfolio.controllers;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
-
 import com.portfolio.portfolio.models.SocialModel;
 import com.portfolio.portfolio.services.SocialService;
 import org.springframework.beans.factory.annotation.Autowired;

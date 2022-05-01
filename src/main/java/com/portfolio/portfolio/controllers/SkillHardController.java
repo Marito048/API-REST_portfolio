@@ -1,12 +1,8 @@
 package com.portfolio.portfolio.controllers;
-
 import java.util.ArrayList;
-
 import com.portfolio.portfolio.models.SkillHardModel;
 import com.portfolio.portfolio.services.SkillHardService;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.*;
 
 @RestController
