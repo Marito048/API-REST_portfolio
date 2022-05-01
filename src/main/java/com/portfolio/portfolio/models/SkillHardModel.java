@@ -16,10 +16,8 @@ public class SkillHardModel {
     @Column(unique = true, nullable = false)
         Long id_duras;
     @Basic
-        String porcentaje_duras;
-    @Basic
+        Long porcentaje_duras;
         String titulo_duras;
-    @Basic
         String descripcion_duras;
         
 }

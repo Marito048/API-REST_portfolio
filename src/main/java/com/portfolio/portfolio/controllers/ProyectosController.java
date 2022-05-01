@@ -14,7 +14,7 @@ public class ProyectosController {
     @GetMapping("/get")
     @ResponseBody
     public ArrayList<ProyectosModel> obtenerProyectos(){
-        return proyectosService.obtenerProyectos();
+         return proyectosService.obtenerProyectos();
 
     }
     @PostMapping("/new")
@@ -27,7 +27,7 @@ public class ProyectosController {
          proyectosService.crearProyectos(proyectos);
         
     }
-    @DeleteMapping("/delete/{id_Proyectos}")
+    @DeleteMapping("/delete/{id_proyectos}")
     public void borrarProyectos(@PathVariable Long id_Proyectos){
         proyectosService.eliminarProyectos(id_Proyectos);
     }
