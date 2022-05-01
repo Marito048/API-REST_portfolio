@@ -15,8 +15,6 @@ public class LoginModel {
     @Column(unique = true, nullable = false)
         Long id_login;
 
-    
-
     @Basic
         String usuario_login;
         String clave_login;
