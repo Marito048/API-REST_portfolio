@@ -27,7 +27,7 @@ public class SkillHardController {
             skillHardService.crearSkillHard(skillHard);
     }
     @DeleteMapping("/delete/{id_SkillHard}")
-    public void borrarSkillHard(@PathVariable Long id_SkillHard){
+    public void borrarSkillHard(@PathVariable Integer id_SkillHard){
         skillHardService.eliminarSkillHard(id_SkillHard);
     }
     

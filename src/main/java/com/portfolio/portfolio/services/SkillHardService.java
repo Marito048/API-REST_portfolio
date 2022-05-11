@@ -21,7 +21,7 @@ public class SkillHardService {
     public void  guardarSkillHard(SkillHardModel skillHard){
         skillHardRepository.save(skillHard);
     }
-    public void  eliminarSkillHard(Long id_SkillHard){
+    public void  eliminarSkillHard(Integer id_SkillHard){
         skillHardRepository.deleteById(id_SkillHard);
     }
     

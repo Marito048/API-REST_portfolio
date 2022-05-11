@@ -18,9 +18,9 @@ public class SkillHardModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-        Long id_duras;
+        int id_duras;
     @Basic
-        Long porcentaje_duras;
+        int porcentaje_duras;
         String titulo_duras;
         String descripcion_duras;
         
