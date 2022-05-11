@@ -11,15 +11,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/skillHard")
+@RequestMapping("/hard")
 public class SkillHardControllers {
     @Autowired
     SkillHardService skillHardService;
     
     @GetMapping("/get")
+    @ResponseBody
     public ArrayList<SkillHardModel> obtenerSkillHard(){
         return skillHardService.obtenerSkillHard();
     }
