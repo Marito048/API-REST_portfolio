@@ -13,18 +13,15 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-@Table(name="interes")
-public class InteresModel {
+@Table(name = "certificados")
+
+public class CertificadosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (unique = true, nullable = false)
-
-    Long id_interes;
-
+    @Column(unique = true, nullable = false)
+        int id_certificados;
     @Basic
-    String tipo_interes;
- 
-
-
+        String descripcion_certificados;
+      
     
 }

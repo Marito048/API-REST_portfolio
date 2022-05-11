@@ -10,7 +10,7 @@ public class PersonaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-        Long id_persona;
+        int id_persona;
     @Basic
         String nombre_persona;
         String apellido_persona;
@@ -20,5 +20,6 @@ public class PersonaModel {
         String titulo_persona;
         String foto_persona;
         String banner_persona;
+        String interes_persona;
         String acercade_persona;    
 }

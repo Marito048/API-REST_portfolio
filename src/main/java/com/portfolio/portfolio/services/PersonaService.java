@@ -19,7 +19,7 @@ public class PersonaService {
     public void  guardarPersona(PersonaModel persona){
         personaRepository.save(persona);
     }
-    public void  eliminarPersona(Long id_persona){
+    public void  eliminarPersona(Integer id_persona){
          personaRepository.deleteById(id_persona);
     }
 

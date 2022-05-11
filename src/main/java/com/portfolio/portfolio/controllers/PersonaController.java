@@ -29,7 +29,7 @@ public class PersonaController {
             
     }    
     @DeleteMapping("/delete/{id_persona}")
-    public void borrarPersona(@PathVariable Long id_persona){
+    public void borrarPersona(@PathVariable Integer id_persona){
         personaService.eliminarPersona(id_persona);
             
     } 
