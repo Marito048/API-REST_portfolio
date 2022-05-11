@@ -25,7 +25,7 @@ public class SocialService {
     public void  guardarSocial(SocialModel social){
         socialRepository.save(social);
     }
-    public void  eliminarSocial(Long id_social){
+    public void  eliminarSocial(Integer id_social){
          socialRepository.deleteById(id_social);
     }
 

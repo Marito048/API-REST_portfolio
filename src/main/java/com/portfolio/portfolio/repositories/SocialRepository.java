@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 
-public interface SocialRepository extends JpaRepository <SocialModel, Long> {
+public interface SocialRepository extends JpaRepository <SocialModel, Integer> {
 
 
 }

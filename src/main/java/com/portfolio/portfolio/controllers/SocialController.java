@@ -18,7 +18,6 @@ public class SocialController {
         return socialService.obtenerSocial();
        
     }
-   
     @PostMapping("/new")
     public void crearSocial(@RequestBody SocialModel social){
         socialService.crearSocial(social);
@@ -30,7 +29,7 @@ public class SocialController {
             
     }    
     @DeleteMapping("/delete/{id_social}")
-    public void borrarSocial(@PathVariable Long id_social){
+    public void borrarSocial(@PathVariable Integer id_social){
         socialService.eliminarSocial(id_social);
             
     } 
