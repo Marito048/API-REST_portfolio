@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hard")
-public class SkillHardControllers {
+public class SkillHardController {
     @Autowired
     SkillHardService skillHardService;
     
     @GetMapping("/get")
     @ResponseBody
     public ArrayList<SkillHardModel> obtenerSkillHard(){
-        return skillHardService.obtenerSkillHard();
+        return  skillHardService.obtenerSkillHard();
     }
     @PutMapping("/update")
     public void modificarSkillHard(SkillHardModel skillHard){
