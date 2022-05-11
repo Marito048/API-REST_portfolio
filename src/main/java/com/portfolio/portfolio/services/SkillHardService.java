@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 public class SkillHardService {
     @Autowired
     SkillHardRepository skillHardRepository;
-
     public ArrayList<SkillHardModel> obtenerSkillHard(){
         return (ArrayList<SkillHardModel>)skillHardRepository.findAll();
     }
@@ -25,9 +24,9 @@ public class SkillHardService {
         skillHardRepository.save(skillHard);
     }
     public void  eliminarSkillHard(Integer id_skillHard){
-        skillHardRepository.deleteById(id_skillHard);
+         skillHardRepository.deleteById(id_skillHard);
     }
     
+ 
     
 }
-
