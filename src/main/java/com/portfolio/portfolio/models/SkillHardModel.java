@@ -22,7 +22,7 @@ public class SkillHardModel {
     @Column(unique = true, nullable = false)
         int id_duras;
     @Basic
-        String porcentaje_duras; 
+        int porcentaje_duras; 
         String titulo_duras;
         String descripcion_duras;
 
