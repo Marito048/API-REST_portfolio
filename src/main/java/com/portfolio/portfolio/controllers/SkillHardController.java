@@ -1,42 +1,37 @@
 package com.portfolio.portfolio.controllers;
-
 import java.util.ArrayList;
-
 import com.portfolio.portfolio.models.SkillHardModel;
 import com.portfolio.portfolio.services.SkillHardService;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hard")
 public class SkillHardController {
     @Autowired
     SkillHardService skillHardService;
-    
+
     @GetMapping("/get")
     @ResponseBody
     public ArrayList<SkillHardModel> obtenerSkillHard(){
-        return  skillHardService.obtenerSkillHard();
+        return skillHardService.obtenerSkillHard();
     }
-    @PutMapping("/update")
-    public void modificarSkillHard(SkillHardModel skillHard){
-        skillHardService.crearSkillHard(skillHard);
+    @GetMapping("/get/{id_duras}")
+    @ResponseBody
+    public SkillHardModel obtenerSkillHardPorId(@PathVariable Integer id_duras){
+        return skillHardService.obtenerSkillHardPorId(id_duras);
     }
     @PostMapping("/new")
-    public void crearSkillHard(SkillHardModel skillHard){
-        skillHardService.crearSkillHard(skillHard);
+    public void guardarSkillHard(@RequestBody SkillHardModel skillHardModel){
+        skillHardService.guardarSkillHard(skillHardModel);
     }
-    @DeleteMapping("/delete/{id_skillHard}")
-    public void borrarSkillHard(Integer id_skillHard){
-        skillHardService.eliminarSkillHard(id_skillHard);
+    @PutMapping("/update")
+    public void modificarSkillHard(@RequestBody SkillHardModel skillHardModel){
+        skillHardService.guardarSkillHard(skillHardModel);
     }
-
+    @DeleteMapping("/delete/{id_duras}")
+    public void eliminarSkillHard(@PathVariable Integer id_duras){
+        skillHardService.eliminarSkillHard(id_duras);
+    }
     
 }

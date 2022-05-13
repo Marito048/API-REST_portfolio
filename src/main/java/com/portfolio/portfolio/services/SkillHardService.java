@@ -1,5 +1,4 @@
 package com.portfolio.portfolio.services;
-
 import java.util.ArrayList;
 
 import com.portfolio.portfolio.models.SkillHardModel;
@@ -9,24 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-
 @Service
 public class SkillHardService {
     @Autowired
-    SkillHardRepository skillHardRepository;
+     SkillHardRepository skillHardRepository;
+
     public ArrayList<SkillHardModel> obtenerSkillHard(){
         return (ArrayList<SkillHardModel>)skillHardRepository.findAll();
     }
-    public void crearSkillHard(SkillHardModel skillHard){
-        skillHardRepository.save(skillHard);
+    public SkillHardModel obtenerSkillHardPorId(int id){
+        return skillHardRepository.findById(id).get();
     }
-    public void  guardarSkillHard(SkillHardModel skillHard){
-        skillHardRepository.save(skillHard);
+    public void guardarSkillHard(SkillHardModel skillHardModel){
+        skillHardRepository.save(skillHardModel);
     }
-    public void  eliminarSkillHard(Integer id_skillHard){
-         skillHardRepository.deleteById(id_skillHard);
+    public void eliminarSkillHard(int id){
+        skillHardRepository.deleteById(id);
     }
     
- 
+
+        
     
+
 }
