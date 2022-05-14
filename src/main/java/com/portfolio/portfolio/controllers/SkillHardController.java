@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import com.portfolio.portfolio.models.SkillHardModel;
 import com.portfolio.portfolio.services.SkillHardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,7 +19,7 @@ public class SkillHardController {
     }
     @GetMapping("/get/{id_duras}")
     @ResponseBody
-    public SkillHardModel obtenerSkillHardPorId(@PathVariable Integer id_duras){
+    public ResponseEntity<SkillHardModel> obtenerSkillHardPorId(@PathVariable Integer id_duras){
         return skillHardService.obtenerSkillHardPorId(id_duras);
     }
     @PostMapping("/new")
